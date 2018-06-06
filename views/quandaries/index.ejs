@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quandary</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h1>“Choices are the hinges of destiny.”</h1>
+         <h4>- Edwin Markham</h4>
+      <% if(quandaries.length>0) { %>
+      <table class="list-table">
+        <thead>
+          <tr>
+            <th>Qundary</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=0; i<quandaries.length;i++) { %>
+            <tr>
+              <td><a href="/quandaries/show/<%= quandaries[i]._id%>"><%= quandaries[i].quandary%></a></td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <% } else { %>
+        <div>You haven't created any quandaries!</div>
+      <% } %>
+      <h3><a href="/quandaries/create">Add a quandary.</a></h3>
+    </div>
+  </body>
+</html>

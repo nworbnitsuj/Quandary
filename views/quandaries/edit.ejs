@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit Quandary</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/quandaries">Quandary List</a></h3>
+      <h1>Edit Quandary</h1>
+      <form action="/quandaries/update/<%= quandary._id%>" method="post">
+        <table>
+          <tbody>
+            <tr>
+              <td>Quandary</td>
+              <td><input type="text" name="conundrum" value="<%= quandary.quandary %>" /></td>
+            </tr>
+            <tr>
+              <td>Pros</td>
+              <td><textarea name="pros"><%= quandary.pros %></textarea></td>
+            </tr>
+            <tr>
+              <td>Cons</td>
+              <td><textarea name="cons"><%= quandary.cons %></textarea></td>
+              <td colspan="2"><button type="submit">Update</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

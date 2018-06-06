@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quandary</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/quandaries">Quandary List</a></h3>
+      <h1>Quandary Details</h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>Quandary</td>
+            <td>:</td>
+            <td><%= quandary.quandary %></td>
+          </tr>
+          <tr>
+            <td>Pros</td>
+            <td>:</td>
+            <td><%= quandary.pros %></td>
+          </tr>
+          <tr>
+            <td>Cons</td>
+            <td>:</td>
+            <td><%= quandary.cons %></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a href="/quandaries/edit/<%= quandary._id%>">EDIT</a></h3>
+      <form action="/quandaries/delete/<%= quandary._id%>" method="post">
+        <button type="submit">DELETE</button>
+      </form>
+    </div>
+  </body>
+</html>
